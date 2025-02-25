@@ -1,19 +1,23 @@
+import { Suspense, lazy } from "react";
+import { useTranslation } from "react-i18next";
 import Box from "@/components/Layout/Box";
 import Typography from "@/components/Typography/Typography";
-import { useTranslation } from "react-i18next";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { EMAIL_ADDR, PHONE_NUMBER } from "@/constants/string";
 import Button from "@/components/Button/Button";
 import { theme } from "@/styles/theme";
 import { useState } from "react";
-import Alert, { AlertItemProps } from "@/components/Feedback/Alert";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import { AlertItemProps } from "@/components/Feedback/Alert";
+import Skeleton from "@/components/Feedback/Skeleton";
+
 /**---------------------------------------------------------------------------/
- 
  * ! ContactUsAside
  * * 메인 고객 응대 시간 영역
- 
 /**--------------------------------------------------------------------------*/
+
+const Alert = lazy(() => import("@/components/Feedback/Alert"));
+
 const ContactUsAside = () => {
   const { t } = useTranslation();
   const [alerts, setAlerts] = useState<AlertItemProps[]>([]);
@@ -64,6 +68,7 @@ const ContactUsAside = () => {
           >
             {t("CONTACT_US_ASIDE_PHONE_MESSAGE")}
           </Button>
+
           <Button
             onClick={handleCopy}
             $variant='text'
@@ -74,8 +79,11 @@ const ContactUsAside = () => {
           </Button>
         </div>
       </Box>
-
-      <Alert alerts={alerts} />
+      <Suspense
+        fallback={<Skeleton $variant='text' $width='60%' $height='2rem' />}
+      >
+        <Alert alerts={alerts} />
+      </Suspense>
     </>
   );
 };

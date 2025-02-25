@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import Button from "@/components/Button/Button";
 import Box from "@/components/Layout/Box";
 import Typography from "@/components/Typography/Typography";
@@ -5,12 +6,14 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { theme } from "@/styles/theme";
 import { useTranslation } from "react-i18next";
 import file from "@assets/files/GaYoung_CV.pdf";
+
 /**---------------------------------------------------------------------------/
- 
  * ! BackGroundSection
  * * 메인 간단한 자기소개 영역
- 
 /**--------------------------------------------------------------------------*/
+
+const Skeleton = lazy(() => import("@/components/Feedback/Skeleton"));
+
 const BackGroundSection = () => {
   const { t } = useTranslation();
 
@@ -19,9 +22,11 @@ const BackGroundSection = () => {
       <Typography $variant='h6' $marginBottom='1%'>
         {t("BACKGROUND_SECTION_MESSAGE_CAPTION")}
       </Typography>
+
       <Typography $variant='h2' $marginBottom='3%' $textAlign='center'>
         {t("BACKGROUND_SECTION_MESSAGE_TITLE")}
       </Typography>
+
       <Typography
         $variant='p'
         $color={theme.colors.grey[700]}
@@ -29,16 +34,24 @@ const BackGroundSection = () => {
       >
         {t("BACKGROUND_SECTION_MESSAGE_TEXT")}
       </Typography>
-      <Button
-        startIcon={<FileDownloadIcon />}
-        $marginTop='5%'
-        $backgroundColor={theme.colors.grey[800]}
-        $fileName='GaYoung_CV'
-        $fileUrl={file}
+
+      <Suspense
+        fallback={
+          <Skeleton $variant='rectangular' $width='150px' $height='50px' />
+        }
       >
-        {t("DOWNLOAD_CV")}
-      </Button>
+        <Button
+          startIcon={<FileDownloadIcon />}
+          $marginTop='5%'
+          $backgroundColor={theme.colors.grey[800]}
+          $fileName='GaYoung_CV'
+          $fileUrl={file}
+        >
+          {t("DOWNLOAD_CV")}
+        </Button>
+      </Suspense>
     </Box>
   );
 };
+
 export default BackGroundSection;

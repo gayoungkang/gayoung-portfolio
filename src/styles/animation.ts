@@ -18,3 +18,14 @@ export const ProgressAnimation = keyframes`
   from { width: 0%; }
   to { width: 100%; }
 `;
+
+export const pulse = keyframes`
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+`;
+
+export const wave = keyframes`
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+`;
