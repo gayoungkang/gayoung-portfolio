@@ -17,6 +17,7 @@ const Footer = () => (
       $fontSize='0.7rem'
       $fontFamily='en'
       $color={theme.colors.grey[700]}
+      $textAlign='center'
     >
       Copyright © GayoungKang. All rights reserved.
     </Typography>

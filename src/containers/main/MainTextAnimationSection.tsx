@@ -9,6 +9,7 @@ import IconButton from "@/components/Button/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WysiwygIcon from "@mui/icons-material/Wysiwyg";
 import { useTranslation } from "react-i18next";
+import LazyImage from "@/components/Feedback/LazyImage";
 
 /**---------------------------------------------------------------------------/
  
@@ -70,7 +71,7 @@ const MainTextAnimationSection = () => {
         </Box>
       </Box>
       <Box>
-        <img src={gifImage} alt='gifImage' />
+        <LazyImage src={gifImage} alt='gifImage' width='500px' height='500px' />
       </Box>
     </Box>
   );

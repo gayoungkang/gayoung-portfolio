@@ -1,4 +1,5 @@
 import { pulse, wave } from "@/styles/animation";
+import { theme } from "@/styles/theme";
 import { css, styled } from "styled-components";
 
 export type SkeletonProps = {
@@ -28,7 +29,7 @@ const Skeleton = (props: SkeletonProps) => {
     $variant = "text",
     $width,
     $height,
-    $animation = "pulse",
+    $animation = "wave",
     $backgroundColor,
   } = props;
 
@@ -50,11 +51,11 @@ const SkeletonStyle = styled.div<SkeletonProps>`
     props.$variant === "circular"
       ? "50%"
       : props.$variant === "rounded"
-        ? "8px"
+        ? theme.borderRadius[4]
         : "0"};
   background: ${(props) =>
     props.$backgroundColor ||
-    "linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%)"};
+    "linear-gradient(90deg, #e0e0e033 25%, #555555 50%, #e0e0e033 75%)"};
   background-size: 200% 100%;
   animation: ${(props) =>
     props.$animation === "wave"

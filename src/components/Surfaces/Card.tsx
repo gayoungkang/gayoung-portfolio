@@ -64,7 +64,10 @@ const ListItem = styled.div<{
   $borderRadius: string;
   $sx?: Record<string, any>;
 }>`
-  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: ${(props) => props.$width || "100%"};
   padding: 20px 30px;

@@ -53,7 +53,13 @@ const Header = () => {
     <HeaderStyle $isScrolled={isScrolled}>
       <IconButton isBackground={false} isHover={false}>
         <a href='/'>
-          <img src={`/logo_white.png`} alt='로고' width='30px' height='auto' />
+          <img
+            src={`/logo_white.png`}
+            alt='로고'
+            width='30px'
+            height='auto'
+            loading='lazy'
+          />
         </a>
       </IconButton>
       <IconButton

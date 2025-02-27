@@ -12,6 +12,7 @@ import Icon_3 from "@assets/images/nextjs_icon.svg";
 import Icon_4 from "@assets/images/html5_icon.svg";
 import Icon_5 from "@assets/images/css3_icon.svg";
 import Icon_6 from "@assets/images/javascript_icon.svg";
+import LazyImage from "@/components/Feedback/LazyImage";
 /**---------------------------------------------------------------------------/
  
  * ! MainTextAnimationSection
@@ -72,7 +73,7 @@ const TechnologyStackSection = () => {
         >
           {t("TECHNOLOGY_TITLE")}
         </Typography>
-        <Typography $variant='h2' $marginBottom='3%' $textAlign='center'>
+        <Typography $variant='h2' $marginBottom='3%'>
           {t("TECHNOLOGY_TEXT")}
         </Typography>
         <Box $width='50%' $justifyContent='space-around'>
@@ -82,6 +83,7 @@ const TechnologyStackSection = () => {
               $isHover={false}
               $backgroundColor={theme.colors.background.light}
               $sx={{
+                alignItems: "flex-start",
                 marginBottom: "20px",
                 "&:nth-child(odd)": {
                   marginRight: "20px",
@@ -89,14 +91,16 @@ const TechnologyStackSection = () => {
                 flex: "1 1 40%",
               }}
             >
-              <Box $height='48px' $flexWrap='nowrap'>
-                <img src={item.image} alt='로고 이미지' />
-              </Box>
+              <LazyImage
+                src={item.image}
+                alt='로고 이미지'
+                width='48px'
+                height='48px'
+              />
               <Typography
                 $variant='h3'
                 $marginBottom='5%'
                 $marginTop='8%'
-                $textAlign='left'
                 $fontFamily='en'
               >
                 {item.title}

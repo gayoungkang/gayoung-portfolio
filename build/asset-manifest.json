@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d2a5c52f.css",
+    "main.js": "/static/js/main.cf2a7212.js",
+    "static/media/sub_loa.png": "/static/media/sub_loa.366f2a64fd01967d4cff.png",
+    "static/media/sub_protoken.png": "/static/media/sub_protoken.1ba12409e3c78c02c535.png",
+    "static/media/sub_mbs.png": "/static/media/sub_mbs.92e8c5a8a670295f7ee9.png",
+    "static/media/emoji.gif": "/static/media/emoji.57108bc9e793253e149a.gif",
+    "static/media/sub_proup.png": "/static/media/sub_proup.d1e8f4c8b091d51bd4c8.png",
+    "static/media/sub_eventpage.png": "/static/media/sub_eventpage.b64a875b43944db9610f.png",
+    "static/media/GaYoung_CV.pdf": "/static/media/GaYoung_CV.6e5c4cab86297feff160.pdf",
+    "static/media/react_icon.svg": "/static/media/react_icon.f1484e295933af0e748d6a01b05a8361.svg",
+    "static/media/typescript_icon.svg": "/static/media/typescript_icon.0553733a9d433cefaf9e04ffcde0eb7a.svg",
+    "static/media/html5_icon.svg": "/static/media/html5_icon.37bf6863fb717ae4cad4e56f9c291a86.svg",
+    "static/media/javascript_icon.svg": "/static/media/javascript_icon.63b93412a24001eff2acc22e0cb40276.svg",
+    "static/media/css3_icon.svg": "/static/media/css3_icon.ac1f9e5fab015740dfd8bf863dd74e8e.svg",
+    "index.html": "/index.html",
+    "static/media/nextjs_icon.svg": "/static/media/nextjs_icon.2426e69d99a468ba15350524597693c4.svg",
+    "main.d2a5c52f.css.map": "/static/css/main.d2a5c52f.css.map",
+    "main.cf2a7212.js.map": "/static/js/main.cf2a7212.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2a5c52f.css",
+    "static/js/main.cf2a7212.js"
+  ]
+}

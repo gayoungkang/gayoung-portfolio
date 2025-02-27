@@ -9,6 +9,7 @@ import ProjectImg_2 from "@assets/images/sub_loa.png";
 import ProjectImg_3 from "@assets/images/sub_mbs.png";
 import ProjectImg_4 from "@assets/images/sub_protoken.png";
 import ProjectImg_5 from "@assets/images/sub_proup.png";
+import LazyImage from "@/components/Feedback/LazyImage";
 /**---------------------------------------------------------------------------/
  
  * ! DevelopmentWorkSection
@@ -86,7 +87,12 @@ const DevelopmentWorkSection = () => {
             >
               {item.description}
             </Typography>
-            <img src={item.image} alt='프로젝트 이미지' />
+            <LazyImage
+              src={item.image}
+              alt='프로젝트 이미지'
+              width='300px'
+              height='300px'
+            />
           </Card>
         ))}
       />

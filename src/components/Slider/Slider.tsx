@@ -29,7 +29,7 @@ const Slider = (props: SliderProps) => {
   const {
     items,
     spaceBetween = 20,
-    slidesPerView = 4,
+    slidesPerView = 2.5,
     centeredSlides = false,
     freeMode = true,
     loop = true,

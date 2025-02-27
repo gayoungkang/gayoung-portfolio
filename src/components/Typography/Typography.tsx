@@ -74,6 +74,7 @@ const Typography = ({
 };
 
 export const TypographyStyle = styled.span<TypographyProps>`
+  width: inherit;
   white-space: pre-wrap;
   word-break: ${(props) =>
     props.$fontFamily === "kr" ? "keep-all" : "break-all"};
